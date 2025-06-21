@@ -9,26 +9,26 @@ form.addEventListener("submit", function(event) {
     event.preventDefault()
 
     const usernameInput = document.getElementById("username")
-    const usernameValue = usernameInput.value.trim()
+    const username = usernameInput.value.trim()
 
     const emailInput = document.getElementById("email")
-    const emailValue = emailInput.value.trim()
+    const email = emailInput.value.trim()
 
     const passwordInput = document.getElementById("password")
-    const passwordValue = passwordInput.value.trim()
+    const password = passwordInput.value.trim()
 
     let isValid = true
     let messages = []
 
-    if (usernameValue.length < 3) {
+    if (username.length < 3) {
         isValid = false
         messages.push("Username must be at least 3 characters")
     }
-    if (!emailValue.includes('@') || !emailValue.includes('.')) {
+    if (!email.includes('@') || !email.includes('.')) {
         isValid = false
         messages.push("Email must include both '@' and '.' characters")
     }
-    if (passwordValue.length < 8) {
+    if (password.length < 8) {
         isValid = false
         messages.push("Password must be at least 8 characters")
     }
